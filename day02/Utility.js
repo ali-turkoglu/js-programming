@@ -21,4 +21,27 @@ function calculate(num1, num2, operator) {
   }
 }
 
-module.exports = { square, cube, calculate };
+function reverseString(str) {
+  let reversedStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedStr += str[i];
+  }
+  return reversedStr;
+}
+
+function countDistinctSubstrings(str) {
+  const n = str.length;
+  let count = 0;
+  for (let i = 0; i < n; i++) {
+    const set = new Set();
+    for (let j = i; j < n; j++) {
+      if (!set.has(str[j])) {
+        set.add(str[j]);
+        count++;
+      }
+    }
+  }
+  return count;
+}
+
+module.exports = { square, cube, calculate, reverseString, countDistinctSubstrings };

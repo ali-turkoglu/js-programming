@@ -53,3 +53,9 @@ class Item{
         console.log(`${this.name} is working.`);
     }
 }
+
+let item1= new Item("Apfel", 1.5, 10);
+let item2= new Item("Bananen", 0.75, 15); 
+  
+
+console.log(item3);
