@@ -52,10 +52,17 @@ class Item{
     work(){
         console.log(`${this.name} is working.`);
     }
+
+    calcPrice(){
+        return this.price * this.quantity;
+    }
 }
 
 let item1= new Item("Apfel", 1.5, 10);
 let item2= new Item("Bananen", 0.75, 15); 
+let item3=new Item("Butter",3.4,8)
   
 
 console.log(item3);
+item2.work();
+console.log(item3.calcPrice()); 

@@ -1,25 +1,24 @@
-class LogInPage extends BasePage{
+class LogInPage extends BasePage {
+  constructor() {
+    this.usernameInputBox = locator("//input[]");
+    this.passwordInputBox = locator("//input[]");
+    this.loginButton = locator("//input]");
+  }
 
-    constructor(){
-        this.usernameInputBox=locator("//input[]")
-        this.passwordInputBox=locator("//input[]")
-        this.loginButton=locator("//input]")
-    }
+  enterPassword(input) {
+    this.passwordInputBox.fill(input);
+  }
 
-    enterPassword(input){
-        this.passwordInputBox.fill(input)
-    }
+  enterUsername(input) {
+    this.usernameInputBox.fill(input);
+  }
+  clickLoginButton() {
+    this.loginButton.click();
+  }
 
-    enterUsername(input){
-        this.usernameInputBox.fill(input)
-    }
-    clickLoginButton(){
-        this.loginButton.click()
-    }
-
-    Worker(){
-console.log(`this`);
-}
+  work() {
+    console.log(`${this.name} is working.`);
+  }
 }
 
 
